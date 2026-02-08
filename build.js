@@ -7,7 +7,7 @@ const CONTENT_DIR = path.join(__dirname, 'content', 'blog');
 const BLOG_DIR = path.join(__dirname, 'blog');
 const INDEX_PATH = path.join(__dirname, 'index.html');
 const SITEMAP_PATH = path.join(__dirname, 'sitemap.xml');
-const SITE_URL = 'https://ecoleblablalatina.pages.dev';
+const SITE_URL = 'https://ecoleblablalatina.com';
 
 const START_MARKER = '<!-- BLOG-CARDS-START -->';
 const END_MARKER = '<!-- BLOG-CARDS-END -->';
