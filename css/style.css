@@ -475,10 +475,7 @@ html.lang-en [data-lang="fr"] { display: none; }
   align-items: start;
 }
 
-.founder-image {
-  position: sticky;
-  top: calc(var(--header-height) + 20px);
-}
+.founder-image {}
 
 .founder-image img {
   border-radius: var(--radius);
@@ -912,6 +909,11 @@ html.lang-en [data-lang="fr"] { display: none; }
 
   .founder-grid {
     grid-template-columns: 300px 1fr;
+  }
+
+  .founder-image {
+    position: sticky;
+    top: calc(var(--header-height) + 20px);
   }
 
   .blog-grid {
