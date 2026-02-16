@@ -5,7 +5,7 @@ date: 2025-02-07
 slug: "cours-espagnol-italien"
 excerpt: "Si vous recherchez des cours de langues de qualité entre Montpellier et Béziers, ne cherchez pas plus loin que l'école Blabla Latina..."
 excerptEn: "If you're looking for quality language courses between Montpellier and Béziers, look no further than École Blabla Latina..."
-image: "teacher-student-french.png"
+image: "teacher-student-italian.png"
 imageAlt: "Cours de langues à l'École Blabla Latina à Pézenas"
 metaDescription: "Découvrez les cours d'espagnol et d'italien de qualité à l'École Blabla Latina, entre Montpellier et Béziers. Cours individuels et en groupe, du A1 au C1."
 breadcrumbFr: "Cours d'espagnol et d'italien"

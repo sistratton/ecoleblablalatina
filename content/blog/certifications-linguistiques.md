@@ -5,7 +5,7 @@ date: 2025-02-06
 slug: "certifications-linguistiques"
 excerpt: "Vous recherchez une école de langues pour vous préparer aux certifications linguistiques officielles à Montpellier ou à Béziers ?..."
 excerptEn: "Looking for a language school to prepare for official language certifications in Montpellier or Béziers?..."
-image: "teacher-student-italian.png"
+image: "teacher-student-spanish.png"
 imageAlt: "Préparation aux certifications linguistiques à Pézenas"
 metaDescription: "Préparez vos certifications linguistiques DELE, CILS, DELF et DALF à l'École Blabla Latina entre Montpellier et Béziers. Cours d'espagnol, italien et français FLE."
 breadcrumbFr: "Certifications linguistiques"

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "École Blabla Latina | Cours d'Espagnol, Italien et Français FLE à Pézenas, Hérault",
+    "description": "École de langues à Pézenas, Hérault. Cours d'espagnol, italien et français FLE du niveau A1 au C1. Cours individuels et en groupe, en présentiel ou à distance. Soutien scolaire du CP à la terminale.",
+    "keywords": "cours espagnol Pézenas, cours italien Pézenas, français FLE Pézenas, école de langues Pézenas, soutien scolaire langues, certifications linguistiques, DELE, CILS, DELF DALF, cours de langues Pézenas",
+    "ogTitle": "École Blabla Latina – Cours de Langues à Pézenas",
+    "ogDescription": "Apprenez l'espagnol, l'italien ou le français avec des professeurs qualifiés à Pézenas."
+  },
+
+  "nav": {
+    "home": { "fr": "Accueil", "en": "Home" },
+    "courses": { "fr": "Cours", "en": "Courses" },
+    "about": { "fr": "À propos", "en": "About" },
+    "reviews": { "fr": "Avis", "en": "Reviews" }
+  },
+
+  "hero": {
+    "title": { "fr": "École de Langues Blabla Latina", "en": "Blabla Latina Language School" },
+    "tagline": "Espagnol · Italien · Français FLE",
+    "location": { "fr": "Pézenas · Hérault, France", "en": "Pézenas · Hérault, France" },
+    "cta": { "fr": "Contactez-nous", "en": "Contact Us" }
+  },
+
+  "intro": {
+    "text": {
+      "fr": "Cours d'espagnol, d'italien et de français (FLE), sur mesure selon vos objectifs. Formules individuelles ou en groupe, en présentiel comme en ligne. Accompagnement vers les certifications officielles, clés d'accès aux universités internationales et aux opportunités professionnelles.",
+      "en": "Spanish, Italian, and French (FLE) courses, tailored to your objectives. Individual or group lessons, in person or online. Support towards official certifications, key to accessing international universities and career opportunities."
+    }
+  },
+
+  "courses": {
+    "title": { "fr": "Nos Cours", "en": "Our Courses" },
+    "detailsBtn": { "fr": "Détails des niveaux ▸", "en": "Level details ▸" },
+    "learnMoreBtn": { "fr": "En savoir plus ▸", "en": "Learn more ▸" },
+    "formatsTitle": { "fr": "Formats de cours", "en": "Course formats" },
+
+    "spanish": {
+      "title": { "fr": "Espagnol", "en": "Spanish" },
+      "desc": { "fr": "Cours d'espagnol langue étrangère (ELE) du niveau A1 au C1. Individuel ou en groupe. <b>Opportunités professionnelles et académiques en Europe et en Amérique latine.</b>", "en": "Spanish as a Foreign Language (ELE) courses from level A1 to C1. Individual or group." },
+      "glossaire": [
+        {"list": { "fr": "Possibilités d’expatriation dans de nombreux pays hispanophones.", "en": "Opportunities for expatriation in many Spanish-speaking countries." } },
+        {"list": { "fr": "Développement des compétences cognitives et interculturelles.", "en": "Development of cognitive and intercultural skills." } },
+        {"list": { "fr": "Langue accessible avec résultats rapides.", "en": "Accessible language with fast results." } }
+      ],
+      "levels": [
+        {
+          "code": "A1",
+          "name": { "fr": "Découverte", "en": "Discovery" },
+          "desc": { "fr": "Se présenter, parler de sa nationalité, de son âge, de sa famille, exprimer des goûts simples. Verbes « ser », « tener », « llamarse », présent de l'indicatif.", "en": "Introduce yourself, talk about nationality, age, family, express simple likes. Verbs \"ser\", \"tener\", \"llamarse\", present indicative." }
+        },
+        {
+          "code": "A2",
+          "name": { "fr": "Survie", "en": "Survival" },
+          "desc": { "fr": "Parler de sa routine, dire l'heure, décrire des lieux, faire des achats. Verbes pronominaux, futur proche, passé composé.", "en": "Talk about your routine, tell the time, describe places, go shopping. Reflexive verbs, near future, past tense." }
+        },
+        {
+          "code": "B1",
+          "name": { "fr": "Seuil", "en": "Threshold" },
+          "desc": { "fr": "Raconter des expériences passées, exprimer une opinion, faire des suggestions. Passé simple et imparfait, conditionnel, subjonctif de base.", "en": "Recount past experiences, express opinions, make suggestions. Past simple and imperfect, conditional, basic subjunctive." }
+        },
+        {
+          "code": "B2",
+          "name": { "fr": "Avancé", "en": "Advanced" },
+          "desc": { "fr": "Argumenter avec nuances, débattre de sujets d'actualité, rédiger des textes structurés. Subjonctif dans les subordonnées, style indirect.", "en": "Argue with nuance, debate current topics, write structured texts. Subjunctive in subordinate clauses, indirect speech." }
+        },
+        {
+          "code": "C1",
+          "name": { "fr": "Autonome", "en": "Proficient" },
+          "desc": { "fr": "Nuancer son discours, interpréter l'ironie, produire des textes complexes. Structures complexes avec le subjonctif, connecteurs logiques variés.", "en": "Nuance your speech, interpret irony, produce complex texts. Complex structures with subjunctive, varied logical connectors." }
+        }
+      ]
+    },
+
+    "italian": {
+      "title": { "fr": "Italien", "en": "Italian" },
+      "desc": { "fr": "Cours d'italien langue étrangère (ILE) du niveau A1 au C1. Individuel ou en groupe. <b>Immersion au cœur de la culture italienne : art, opéra, cinéma, gastronomie et patrimoine historique.</b>", "en": "Italian as a Foreign Language (ILE) courses from level A1 to C1. Individual or group. <b>Immersion in the heart of Italian culture: art, opera, cinema, gastronomy and historical heritage.</b>" },
+      "glossaire": [
+        {"list": { "fr": "Pays reconnu pour avoir les meilleures universités d’art, de design et d’architecture (7eme à l'échelle mondiale).", "en": "A country renowned for having the best universities in art, design and architecture (7th in the world)." } },
+        {"list": { "fr": "Immersion culturelle vivante et authentique. ", "en": "A vibrant and authentic cultural immersion." } },
+        {"list": { "fr": "Parfait pour voyager et créer des liens dans ce pays si riche architecturalement.", "en": "Perfect for travelling and making connections in this architecturally rich country." } }
+      ],
+      "levels": [
+        {
+          "code": "A1",
+          "name": { "fr": "Découverte", "en": "Discovery" },
+          "desc": { "fr": "Se présenter, dire son nom, son âge, sa nationalité, exprimer des goûts simples. Verbes « essere », « avere », présent de l'indicatif.", "en": "Introduce yourself, state your name, age, nationality, express simple likes. Verbs \"essere\", \"avere\", present indicative." }
+        },
+        {
+          "code": "A2",
+          "name": { "fr": "Survie", "en": "Survival" },
+          "desc": { "fr": "Parler de ses habitudes, de sa routine, faire des achats, commander au restaurant. Futur proche, passé composé, verbes pronominaux.", "en": "Talk about habits, routines, go shopping, order at restaurants. Near future, past tense, reflexive verbs." }
+        },
+        {
+          "code": "B1",
+          "name": { "fr": "Seuil", "en": "Threshold" },
+          "desc": { "fr": "Décrire des événements passés, exprimer des opinions, faire des hypothèses. Imparfait, conditionnel, subjonctif de base.", "en": "Describe past events, express opinions, make hypotheses. Imperfect, conditional, basic subjunctive." }
+        },
+        {
+          "code": "B2",
+          "name": { "fr": "Avancé", "en": "Advanced" },
+          "desc": { "fr": "Nuancer un discours, argumenter, discuter de sujets d'actualité. Concordance des temps, subjonctif dans les subordonnées, style indirect.", "en": "Nuance speech, argue, discuss current topics. Tense agreement, subjunctive in subordinate clauses, indirect speech." }
+        },
+        {
+          "code": "C1",
+          "name": { "fr": "Autonome", "en": "Proficient" },
+          "desc": { "fr": "S'exprimer avec spontanéité, comprendre l'implicite, produire des textes élaborés. Préparation à l'examen CILS C1.", "en": "Express yourself spontaneously, understand implicit meaning, produce elaborate texts. CILS C1 exam preparation." }
+        }
+      ]
+    },
+
+    "french": {
+      "title": { "fr": "Français FLE", "en": "French as a Foreign Language" },
+      "desc": { "fr": "Cours de français langue étrangère (FLE) du niveau A1 au C1. Préparation DELF/DALF. <b>Ouverture à la culture française : gastronomie, art, littérature.</b>", "en": "French as a Foreign Language (FLE) courses from level A1 to C1. DELF/DALF preparation. <b>Opening up to French culture: gastronomy, art, literature.</b>" },
+      "glossaire": [
+        {"list": { "fr": "Maîtrise d’une langue parlée sur 5 continents.", "en": "Fluency in a language spoken on 5 continents." } },
+        {"list": { "fr": "Accès aux universités et études supérieures en France et en Europe.", "en": "Access to universities and higher education in France and Europe." } },
+        {"list": { "fr": "Épanouissement professionnel.", "en": "Professional development." } }
+      ],
+      "levels": [
+        {
+          "code": "A1",
+          "name": { "fr": "Découverte", "en": "Discovery" },
+          "desc": { "fr": "Se présenter, poser des questions simples, parler de soi, exprimer ses goûts. Verbe « être » et « avoir », présent de l'indicatif.", "en": "Introduce yourself, ask simple questions, talk about yourself, express likes. Verbs \"être\" and \"avoir\", present indicative." }
+        },
+        {
+          "code": "A2",
+          "name": { "fr": "Survie", "en": "Survival" },
+          "desc": { "fr": "Parler de ses habitudes, décrire son environnement, faire des achats. Futur proche, passé composé, comparatifs.", "en": "Talk about habits, describe your environment, go shopping. Near future, past tense, comparatives." }
+        },
+        {
+          "code": "B1",
+          "name": { "fr": "Seuil", "en": "Threshold" },
+          "desc": { "fr": "Relater un événement, exprimer son opinion, débattre de sujets quotidiens. Imparfait vs passé composé, subjonctif présent, conditionnel.", "en": "Recount events, express opinions, debate everyday topics. Imperfect vs past tense, present subjunctive, conditional." }
+        },
+        {
+          "code": "B2",
+          "name": { "fr": "Avancé", "en": "Advanced" },
+          "desc": { "fr": "Argumenter, nuancer son discours, comprendre la presse. Subjonctif, discours indirect, passif, concordance des temps.", "en": "Argue, nuance your speech, understand the press. Subjunctive, indirect speech, passive voice, tense agreement." }
+        },
+        {
+          "code": "C1",
+          "name": { "fr": "Autonome", "en": "Proficient" },
+          "desc": { "fr": "S'exprimer avec aisance, comprendre les implicites, écrire et débattre avec finesse. Préparation DELF/DALF.", "en": "Express yourself fluently, understand implicit meaning, write and debate with finesse. DELF/DALF preparation." }
+        }
+      ]
+    },
+
+    "soutien": {
+      "title": { "fr": "Soutien Scolaire", "en": "Academic Support" },
+      "desc": { "fr": "Programme de soutien scolaire du CP à la terminale. Préparation au Bac de français, d'espagnol et d'italien. <b>Accompagnement personnalisé</b> – des cours adaptés au niveau et aux besoins de chaque élève.", "en": "Academic support from primary school to final year. French, Spanish and Italian Bac exam preparation." },
+      "glossaire": [
+        {"list": { "fr": "<b>Méthodes efficaces</b> – des stratégies d’apprentissage modernes pour progresser rapidement.", "en": "<b>Effective methods</b> – modern learning strategies for rapid progress." } },
+        {"list": { "fr": "<b>Professeurs qualifiés</b> – des enseignants expérimentés et motivants.", "en": "<b>Qualified teachers</b> – experienced and motivating instructors." } },
+        {"list": { "fr": "<b>Résultats concrets</b> – amélioration des notes, confiance en soi et réussite scolaire..", "en": "<b>Concrete results</b> – improved grades, self-confidence and academic success." } }
+      ],
+      "content": {
+        "fr": "Notre programme de soutien scolaire couvre tous les niveaux du CP à la terminale. Nous accompagnons les élèves dans leur apprentissage des langues avec une approche personnalisée, adaptée aux besoins spécifiques de chaque élève. Préparation au Bac de français, d'espagnol et d'italien avec examen à la clé. Expertise dans l'accompagnement d'enfants et de jeunes présentant des troubles DYS et TDAH.",
+        "en": "Our academic support programme covers all levels from primary to final year. We support students in their language learning with a personalised approach adapted to each student's specific needs. Preparation for French, Spanish and Italian Bac exams. Expertise in supporting children and young people with DYS disorders and ADHD."
+      }
+    },
+
+    "formats": [
+      { "icon": "👤", "label": { "fr": "Individuel", "en": "Individual" } },
+      { "icon": "👥", "label": { "fr": "En groupe", "en": "Group" } },
+      { "icon": "🏠", "label": { "fr": "À domicile", "en": "At home" } },
+      { "icon": "💻", "label": { "fr": "En visioconférence", "en": "Via video call" } },
+      { "icon": "🏫", "label": { "fr": "En présentiel", "en": "In person" } }
+    ]
+  },
+
+  "about": {
+    "title": { "fr": "À propos", "en": "About" },
+    "text": {
+      "fr": "<p>Située à <b>Pézenas</b>, notre école de langues accompagne enfants, adolescents et adultes dans l’apprentissage de l’espagnol, de l’italien et du français (FLE). Nous proposons des cours en individuel ou en groupe, TOUS NIVEAUX, dans un cadre bienveillant et stimulant.</p>Notre objectif est d’amener chaque élève vers une progression solide et durable, notamment à travers la préparation aux <b>certifications linguistiques officielles</b>, reconnues à l’international. Nous offrons également un <b>soutien scolaire du CP à la Terminale</b>, afin d’accompagner chaque parcours avec rigueur, écoute et attention.",
+      "en": "<p>Located in Pézenas, our language school supports children, teenagers, and adults in learning Spanish, Italian, and French (FLE). We offer individual or group courses for all levels in a supportive and stimulating environment.</p>Our goal is to guide each student towards solid and lasting progress, particularly through preparation for official, internationally recognized language certifications. We also offer academic support from elementary school (CP) through high school (Terminale), to guide each student's journey with rigor, attentiveness, and care."
+    },
+    "whyTitle": { "fr": "Pourquoi apprendre une nouvelle langue ?", "en": "Why learn a new language?" },
+    "benefits": [
+      {
+        "title": { "fr": "Communication internationale", "en": "International communication" },
+        "text": { "fr": " – Échangez plus facilement avec des personnes du monde entier.", "en": " – Communicate more easily with people from around the world." }
+      },
+      {
+        "title": { "fr": "Ouverture culturelle", "en": "Cultural awareness" },
+        "text": { "fr": " – Découvrez d'autres cultures et comprenez mieux les différences entre les peuples.", "en": " – Discover other cultures and better understand the differences between peoples." }
+      },
+      {
+        "title": { "fr": "Développement personnel", "en": "Personal development" },
+        "text": { "fr": " – Améliorez votre mémoire, votre créativité et votre estime de soi.", "en": " – Improve your memory, creativity and self-esteem." }
+      },
+      {
+        "title": { "fr": "Opportunités professionnelles", "en": "Career opportunities" },
+        "text": { "fr": " – Parler une autre langue vous donne un atout sur le marché du travail.", "en": " – Speaking another language gives you an edge in the job market." }
+      },
+      {
+        "title": { "fr": "Voyager plus facilement", "en": "Travel more easily" },
+        "text": { "fr": " – Sentez-vous plus à l'aise en voyage et profitez mieux de vos expériences.", "en": " – Feel more comfortable travelling and make the most of your experiences." }
+      }
+    ]
+  },
+
+  "founder": {
+    "title": { "fr": "Qui je suis", "en": "About me" },
+    "bio1": {
+      "fr": "Je suis Camille Farion, fondatrice de l'<b>École Blabla Latina</b> et professeure d'espagnol, d'italien et de français (FLE) depuis plus de dix ans. Titulaire d'un <b>Master en langues étrangères</b>, je mets ma passion pour l'enseignement au service des <b>enfants, adolescents et adultes</b>, en les accompagnant vers un <b>progrès rapide et durable</b> tout en leur ouvrant les portes <b>d'une véritable richesse interculturelle</b>.",
+      "en": "I am Camille Farion, founder of the <b>Blabla Latina School</b> and a teacher of Spanish, Italian and French (FLE) for over ten years. Holding a <b>Master's degree in foreign languages</b>, I put my passion for teaching at the service of <b>children, teenagers and adults</b>, guiding them towards rapid and lasting progress while opening the doors to a truly rich intercultural experience."
+    },
+    "bio2": {
+      "fr": "Mon parcours m’a amenée à <b>vivre plus de cinq ans dans différents pays d’Europe et d’Amérique latine</b>, en partageant le quotidien des habitants et en apprenant directement auprès des locuteurs natifs, ce qui m’a permis de m’immerger pleinement dans leurs langues et cultures.",
+      "en": "My journey has led me to live for more than five years in different countries in Europe and Latin America, sharing the daily lives of the inhabitants and learning directly from native speakers, which has allowed me to fully immerse myself in their languages ​​and cultures."
+    },
+    "bio3": {
+      "fr": "J’ai exercé sept ans comme AESH, période pendant laquelle j’ai <b>pu perfectionner un enseignement auprès d’enfants présentant DYS, TDAH ou autisme</b>, avec des méthodes applicables à tous les âges.",
+      "en": "I worked for seven years as an AESH (Assistant for Students with Disabilities), during which time I was able to perfect teaching methods for children with dyslexia, ADHD or autism, using methods applicable to all ages."
+    },
+    "bio4": {
+      "fr": "À ce jour, j’ai eu la chance d’<b>accompagner des centaines de personnes</b> dans leurs projets personnels, académiques et professionnels, <b>les aidant dans de nombreux cas à obtenir des certifications officielles (DELF, DELE, CELI, CLOE)</b>. Certains ont commencé avec des connaissances préalables, d’autres <b>ont entamé leur apprentissage depuis zéro</b>, avec des résultats concrets et durables.",
+      "en": "To date, I have had the privilege of supporting hundreds of people in their personal, academic, and professional projects, helping them in many cases to obtain official certifications (DELF, DELE, CELI, CLOE). Some started with prior knowledge, while others began their learning from scratch, with concrete and lasting results."
+    },
+    "bio5": {
+      "fr": "Mes cours de langues et mon accompagnement scolaire sont <b>personnalisés et bienveillants</b>, alliant <b>dynamisme, pédagogie inclusive</b> et <b>mise en confiance pour chaque élève</b>.",
+      "en": "My language courses and academic support are personalized and caring, combining dynamism, inclusive teaching methods and building confidence for each student."
+    }
+  },
+
+  "reviews": {
+    "title": { "fr": "Avis de nos élèves", "en": "Student Reviews" },
+    "subtitle": { "fr": "Découvrez ce que nos élèves disent de nous", "en": "Authentic student reviews (in French)" },
+    "items": [
+      { "src": "images/avis/espagnol/carla.png", "alt": "Avis 5 étoiles de Carla – cours d'espagnol à l'École Blabla Latina" },
+      { "src": "images/avis/espagnol/mathilde.png", "alt": "Avis 5 étoiles de Mathilde – cours d'espagnol à l'École Blabla Latina" },
+      { "src": "images/avis/espagnol/of-drums-and-chords.png", "alt": "Avis 5 étoiles – cours d'espagnol à l'École Blabla Latina" },
+      { "src": "images/avis/francais-fle/mohamed.png", "alt": "Avis 5 étoiles de Mohamed – cours de français FLE à l'École Blabla Latina" },
+      { "src": "images/avis/francais-fle/renee.png", "alt": "Avis 5 étoiles de Renée – cours de français FLE à l'École Blabla Latina" },
+      { "src": "images/avis/francais-fle/corrinne.png", "alt": "Avis 5 étoiles de Corrinne – cours de français FLE à l'École Blabla Latina" },
+      { "src": "images/avis/italien/aurelia.png", "alt": "Avis 5 étoiles d'Aurélia – cours d'italien à l'École Blabla Latina" },
+      { "src": "images/avis/italien/coralie.png", "alt": "Avis 5 étoiles de Coralie – cours d'italien à l'École Blabla Latina" },
+      { "src": "images/avis/italien/kerry.png", "alt": "Avis 5 étoiles de Kerry – cours d'italien à l'École Blabla Latina" },
+      { "src": "images/avis/italien/noemie.png", "alt": "Avis 5 étoiles de Noémie – cours d'italien à l'École Blabla Latina" },
+      { "src": "images/avis/veronique.png", "alt": "Avis 5 étoiles de Véronique – École Blabla Latina Pézenas" }
+    ]
+  },
+
+  "contact": {
+    "title": { "fr": "Contactez-nous", "en": "Contact Us" },
+    "subtitle": { "fr": "Laissez un message. Nous revenons vers vous.", "en": "Leave us a message. We'll get back to you." },
+    "nameLabel": { "fr": "Nom", "en": "Name" },
+    "phoneLabel": { "fr": "Téléphone", "en": "Phone" },
+    "submitBtn": { "fr": "Envoyer", "en": "Send" },
+    "addressTitle": { "fr": "Adresse", "en": "Address" },
+    "phoneTitle": { "fr": "Téléphone", "en": "Phone" },
+    "socialTitle": { "fr": "Réseaux sociaux", "en": "Social Media" }
+  },
+
+  "footer": {
+    "brand": { "fr": "École de Langues à Pézenas, Hérault", "en": "Language School in Pézenas, Hérault" },
+    "navTitle": { "fr": "Navigation", "en": "Navigation" },
+    "copyright": { "fr": "Tous droits réservés.", "en": "All rights reserved." },
+    "legalBtn": { "fr": "Mentions légales", "en": "Legal Notice" }
+  },
+
+  "legal": {
+    "title": { "fr": "Mentions Légales", "en": "Legal Notice" },
+    "fr": "<p><strong>Éditeur du site :</strong><br>\n          Camille Farion – École Blabla Latina<br>\n          1 Rue des Fontaynelles, 34120 Tourbes, France<br>\n          Email : ecole.blabla.latina@gmail.com<br>\n          Téléphone : 06 13 41 63 20</p>\n          <p><strong>Hébergeur :</strong><br>\n          Cloudflare, Inc.<br>\n          101 Townsend Street, San Francisco, CA 94107, USA</p>\n          <p><strong>Protection des données :</strong><br>\n          Les informations recueillies via le formulaire de contact sont destinées exclusivement à l'École Blabla Latina pour répondre à vos demandes. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à ecole.blabla.latina@gmail.com.</p>",
+    "en": "<p><strong>Site Publisher:</strong><br>\n          Camille Farion – École Blabla Latina<br>\n          1 Rue des Fontaynelles, 34120 Tourbes, France<br>\n          Email: ecole.blabla.latina@gmail.com<br>\n          Phone: 06 13 41 63 20</p>\n          <p><strong>Hosting Provider:</strong><br>\n          Cloudflare, Inc.<br>\n          101 Townsend Street, San Francisco, CA 94107, USA</p>\n          <p><strong>Data Protection:</strong><br>\n          Information collected through the contact form is intended exclusively for École Blabla Latina to respond to your enquiries. In accordance with GDPR, you have the right to access, rectify and delete your data. To exercise these rights, contact us at ecole.blabla.latina@gmail.com.</p>"
+  },
+
+  "blog": {
+    "readMore": { "fr": "Lire la suite", "en": "Read more" },
+    "otherArticles": { "fr": "Autres articles", "en": "Other articles" },
+    "contactUs": { "fr": "Contactez-nous", "en": "Contact Us" },
+    "backToHome": { "fr": "Retour à l'accueil", "en": "Back to home" },
+    "copyright": { "fr": "Tous droits réservés.", "en": "All rights reserved." },
+    "defaultCtaTitle": { "fr": "Intéressé(e) par nos cours ?", "en": "Interested in our courses?" },
+    "defaultCtaText": { "fr": "Contactez-nous pour plus d'informations.", "en": "Contact us for more information." }
+  },
+
+  "js": {
+    "formSuccess": { "fr": "Merci ! Votre message a été envoyé avec succès.", "en": "Thank you! Your message has been sent successfully." },
+    "formError": { "fr": "Une erreur est survenue. Veuillez réessayer.", "en": "An error occurred. Please try again." },
+    "sending": { "fr": "Envoi en cours...", "en": "Sending..." }
+  }
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr" class="lang-fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{raw:meta.title}}</title>
+  <meta name="description" content="{{raw:meta.description}}">
+  <meta name="keywords" content="{{raw:meta.keywords}}">
+  <link rel="canonical" href="https://ecoleblablalatina.com/">
+  <meta property="og:title" content="{{raw:meta.ogTitle}}">
+  <meta property="og:description" content="{{raw:meta.ogDescription}}">
+  <meta property="og:image" content="https://ecoleblablalatina.com/images/logo.png">
+  <meta property="og:url" content="https://ecoleblablalatina.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "École de Langues Blabla Latina",
+    "description": "École de langues spécialisée dans l'espagnol, l'italien et le français FLE à Pézenas, Hérault",
+    "url": "https://ecoleblablalatina.com",
+    "telephone": "+33613416320",
+    "email": "ecole.blabla.latina@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Rue des Fontaynelles",
+      "addressLocality": "Pézenas",
+      "postalCode": "34120",
+      "addressRegion": "Hérault",
+      "addressCountry": "FR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Camille Farion"
+    },
+    "sameAs": [
+      "https://www.facebook.com/EcoleBlablaLatina/",
+      "https://www.instagram.com/ecole.blabla.latina/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cours de langues",
+      "itemListElement": [
+        {"@type": "Course", "name": "Cours d'Espagnol", "description": "Cours d'espagnol langue étrangère, niveaux A1 à C1"},
+        {"@type": "Course", "name": "Cours d'Italien", "description": "Cours d'italien langue étrangère, niveaux A1 à C1"},
+        {"@type": "Course", "name": "Français Langue Étrangère (FLE)", "description": "Cours de français FLE, niveaux A1 à C1"},
+        {"@type": "Course", "name": "Soutien Scolaire", "description": "Soutien scolaire en langues du CP à la Terminale"}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#accueil" class="logo">
+        <img src="images/logo.png" alt="Logo École Blabla Latina" width="48" height="48">
+        <span class="logo-text">Blabla Latina</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#accueil">{{nav.home}}</a>
+        <a href="#cours">{{nav.courses}}</a>
+        <a href="#a-propos">{{nav.about}}</a>
+        <a href="#avis">{{nav.reviews}}</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="lang-switch">
+        <button onclick="toggleLanguage('fr')" class="lang-btn" aria-label="Français" title="Français">
+          <img src="images/flag-france.png" alt="FR" width="28" height="28">
+        </button>
+        <button onclick="toggleLanguage('en')" class="lang-btn" aria-label="English" title="English">
+          <img src="images/flag-uk.png" alt="EN" width="28" height="28">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="container">
+      <img src="images/logo.png" alt="Logo École Blabla Latina – cours de langues à Pézenas" class="hero-logo"
+        width="140" height="280">
+      <h1>{{hero.title}}</h1>
+      <p class="hero-tagline">{{raw:hero.tagline}}</p>
+      <p class="hero-location">{{hero.location}}</p>
+      <a href="#contact" class="btn btn-primary">{{hero.cta}}</a>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      {{p:intro.text}}
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="courses" id="cours">
+    <div class="container">
+      <h2>{{courses.title}}</h2>
+      <div class="course-grid">
+
+        <!-- ESPAGNOL -->
+        <div class="course-card course-card--spanish">
+          <img src="images/student-studying-spanish.png"
+            alt="Cours d'espagnol à Pézenas – apprendre l'espagnol dans l'Hérault" loading="lazy" width="400"
+            height="400">
+          <h3>{{courses.spanish.title}}</h3>
+          <p>{{courses.spanish.desc}}</p>
+          <ul class="benefits-list">
+            {{#each courses.spanish.glossaire}}
+            <li>{{this.list}}</li>
+            {{/each}}
+          </ul>
+          <button class="accordion-toggle" aria-expanded="false">{{courses.detailsBtn}}</button>
+          <div class="accordion-content">
+            {{#each courses.spanish.levels}}
+            <div class="level">
+              <h4>{{raw:this.code}} – {{this.name}}</h4>
+              {{p:this.desc}}
+            </div>
+            {{/each}}
+          </div>
+        </div>
+
+        <!-- ITALIEN -->
+        <div class="course-card course-card--italian">
+          <img src="images/student-studying-italian.png"
+            alt="Cours d'italien à Pézenas – apprendre l'italien dans l'Hérault" loading="lazy" width="400"
+            height="400">
+          <h3>{{courses.italian.title}}</h3>
+          <p>{{courses.italian.desc}}</p>
+          <ul class="benefits-list">
+            {{#each courses.italian.glossaire}}
+            <li>{{this.list}}</li>
+            {{/each}}
+          </ul>
+          <button class="accordion-toggle" aria-expanded="false">{{courses.detailsBtn}}</button>
+          <div class="accordion-content">
+            {{#each courses.italian.levels}}
+            <div class="level">
+              <h4>{{raw:this.code}} – {{this.name}}</h4>
+              {{p:this.desc}}
+            </div>
+            {{/each}}
+          </div>
+        </div>
+
+        <!-- FRANÇAIS FLE -->
+        <div class="course-card course-card--french">
+          <img src="images/student-studying-french.png"
+            alt="Cours de français FLE à Pézenas – apprendre le français dans l'Hérault" loading="lazy" width="400"
+            height="400">
+          <h3>{{courses.french.title}}</h3>
+          <p>{{courses.french.desc}}</p>
+          <ul class="benefits-list">
+            {{#each courses.french.glossaire}}
+            <li>{{this.list}}</li>
+            {{/each}}
+          </ul>
+          <button class="accordion-toggle" aria-expanded="false">{{courses.detailsBtn}}</button>
+          <div class="accordion-content">
+            {{#each courses.french.levels}}
+            <div class="level">
+              <h4>{{raw:this.code}} – {{this.name}}</h4>
+              {{p:this.desc}}
+            </div>
+            {{/each}}
+          </div>
+        </div>
+
+        <!-- SOUTIEN SCOLAIRE -->
+        <div class="course-card course-card--soutien">
+          <img src="images/cartoon-teacher-child-spanish.png"
+            alt="Soutien scolaire en langues à Pézenas – du CP à la terminale" loading="lazy" width="400" height="400">
+          <h3>{{courses.soutien.title}}</h3>
+          <p>{{courses.soutien.desc}}</p>
+          <ul class="benefits-list">
+            {{#each courses.soutien.glossaire}}
+            <li>{{this.list}}</li>
+            {{/each}}
+          </ul>
+          <button class="accordion-toggle" aria-expanded="false">{{courses.learnMoreBtn}}</button>
+          <div class="accordion-content">
+            <div class="level">
+              {{p:courses.soutien.content}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="course-formats">
+        <h3>{{courses.formatsTitle}}</h3>
+        <div class="format-grid">
+          {{#each courses.formats}}
+          <div class="format-item">
+            <span class="format-icon">{{raw:this.icon}}</span>
+            {{this.label}}
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="a-propos">
+    <div class="container">
+      <h2>{{about.title}}</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          {{p:about.text}}
+
+          <h3>{{about.whyTitle}}</h3>
+          <ul class="benefits-list">
+            {{#each about.benefits}}
+            <li>
+              {{strong:this.title}}
+              {{this.text}}
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="images/camille-teaching-children.png" alt="Camille Farion enseigne l'espagnol aux enfants à Pézenas"
+            loading="lazy">
+        </div>
+      </div>
+
+      <!-- FOUNDER -->
+      <div class="founder" id="qui-je-suis">
+        <div class="founder-grid">
+          <div class="founder-image">
+            <img src="images/camille-farion.png" alt="Camille Farion, fondatrice de l'École Blabla Latina à Pézenas"
+              loading="lazy">
+          </div>
+          <div class="founder-text">
+            <h3>{{founder.title}}</h3>
+            {{p:founder.bio1}}
+            {{p:founder.bio2}}
+            {{p:founder.bio3}}
+            {{p:founder.bio4}}
+            {{p:founder.bio5}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="avis">
+    <div class="container">
+      <h2>{{reviews.title}}</h2>
+      <p class="section-subtitle">{{reviews.subtitle}}</p>
+
+      <div class="reviews-carousel" id="reviews-carousel">
+        {{#each reviews.items}}
+        <div class="review-card">
+          <img src="{{raw:this.src}}" alt="{{raw:this.alt}}" loading="lazy">
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog-section" id="blog">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-grid">
+        <!-- BLOG-CARDS-START -->
+        <!-- Blog cards are auto-generated by build.js from content/blog/*.md -->
+        <!-- BLOG-CARDS-END -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>{{contact.title}}</h2>
+      <p class="section-subtitle">{{contact.subtitle}}</p>
+
+      <div class="contact-grid">
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
+          <input type="hidden" name="access_key" value="2147f4e0-10a4-4dc8-9851-0902e217a424">
+          <input type="hidden" name="subject" value="Nouveau message depuis le site Blabla Latina">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-group">
+            <label for="name">{{contact.nameLabel}}</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">{{contact.phoneLabel}}</label>
+            <input type="tel" name="phone" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">{{contact.submitBtn}}</button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>{{contact.addressTitle}}</h3>
+            <p>1 Rue des Fontaynelles<br>34120 Tourbes, France</p>
+          </div>
+          <div class="contact-item">
+            <h3>{{contact.phoneTitle}}</h3>
+            <p><a href="tel:+33613416320">06 13 41 63 20</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:ecole.blabla.latina@gmail.com">ecole.blabla.latina@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>{{contact.socialTitle}}</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/EcoleBlablaLatina/" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/ecole.blabla.latina/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.5!2d3.4264!3d43.4944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b13e0a2f4b1b1b%3A0x0!2s1+Rue+des+Fontaynelles%2C+34120+Tourbes!5e0!3m2!1sfr!2sfr!4v1700000000000"
+              width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localisation École Blabla Latina – Tourbes, Hérault"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Logo École Blabla Latina" width="40" height="40">
+          <span>Blabla Latina</span>
+          <p>{{footer.brand}}</p>
+        </div>
+        <div class="footer-links">
+          <h4>{{footer.navTitle}}</h4>
+          <a href="#accueil">{{nav.home}}</a>
+          <a href="#cours">{{nav.courses}}</a>
+          <a href="#a-propos">{{nav.about}}</a>
+          <a href="#avis">{{nav.reviews}}</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>06 13 41 63 20</p>
+          <p>ecole.blabla.latina@gmail.com</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/EcoleBlablaLatina/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/ecole.blabla.latina/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 École Blabla Latina. {{footer.copyright}}</p>
+        <button class="mentions-toggle" id="mentions-toggle">{{footer.legalBtn}}</button>
+      </div>
+    </div>
+
+    <!-- MENTIONS LÉGALES MODAL -->
+    <div class="modal" id="mentions-modal">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Fermer">&times;</button>
+        <h3>{{legal.title}}</h3>
+        <div data-lang="fr">
+          {{raw:legal.fr}}
+        </div>
+        <div data-lang="en">
+          {{raw:legal.en}}
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.__TEXT__ = {{ jsText }};</script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

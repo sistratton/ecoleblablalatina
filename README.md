@@ -174,3 +174,9 @@ The day-to-day workflow becomes:
 6. Code owner reviews and approves
 7. Merge the PR into `main`
 8. Cloudflare Pages automatically deploys to production
+
+display: flex; flex-direction: column; on .course-card (style.css:305-306) — makes the card a flex column so children can distribute vertical space.
+
+margin-top: auto; on .accordion-toggle (style.css:348) — pushes the toggle (and the accordion content below it) to the bottom of the card, filling any remaining space above it.
+
+Since the cards are in a CSS grid, they already stretch to equal heights. The margin-top: auto absorbs the leftover space, ensuring the button stays pinned to the bottom regardless of how much content each card has.

@@ -1,3 +1,6 @@
+// ===== TEXT FROM BUILD =====
+var __TEXT = window.__TEXT__ || {};
+
 // ===== LANGUAGE TOGGLE =====
 function toggleLanguage(lang) {
   document.documentElement.className = 'lang-' + lang;
@@ -68,7 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
       var originalText = submitBtn.innerHTML;
 
       submitBtn.classList.add('loading');
-      submitBtn.innerHTML = '<span data-lang="fr">Envoi en cours...</span><span data-lang="en">Sending...</span>';
+      var sendingFr = __TEXT.sending ? __TEXT.sending.fr : '...';
+      var sendingEn = __TEXT.sending ? __TEXT.sending.en : '...';
+      submitBtn.innerHTML = '<span data-lang="fr">' + sendingFr + '</span><span data-lang="en">' + sendingEn + '</span>';
       // Re-apply language visibility to new spans
       toggleLanguage(localStorage.getItem('preferredLang') || 'fr');
 
@@ -87,16 +92,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (result.success) {
           status.className = 'form-status success';
           var lang = localStorage.getItem('preferredLang') || 'fr';
-          status.textContent = lang === 'fr'
-            ? 'Merci ! Votre message a été envoyé avec succès.'
-            : 'Thank you! Your message has been sent successfully.';
+          status.textContent = __TEXT.formSuccess ? __TEXT.formSuccess[lang] : '';
           form.reset();
         } else {
           status.className = 'form-status error';
           var lang = localStorage.getItem('preferredLang') || 'fr';
-          status.textContent = lang === 'fr'
-            ? 'Une erreur est survenue. Veuillez réessayer.'
-            : 'An error occurred. Please try again.';
+          status.textContent = __TEXT.formError ? __TEXT.formError[lang] : '';
         }
       })
       .catch(function() {
@@ -105,9 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleLanguage(localStorage.getItem('preferredLang') || 'fr');
         status.className = 'form-status error';
         var lang = localStorage.getItem('preferredLang') || 'fr';
-        status.textContent = lang === 'fr'
-          ? 'Une erreur est survenue. Veuillez réessayer.'
-          : 'An error occurred. Please try again.';
+        status.textContent = __TEXT.formError ? __TEXT.formError[lang] : '';
       });
     });
   }

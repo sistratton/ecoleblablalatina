@@ -301,6 +301,8 @@ html.lang-en [data-lang="fr"] { display: none; }
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
   border-top: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
 }
 
 .course-card:hover {
@@ -324,7 +326,9 @@ html.lang-en [data-lang="fr"] { display: none; }
   font-size: 1.3rem;
 }
 
-.course-card > p {
+.course-card > p,
+.course-card > .benefits-list,
+.course-card > .benefits-list li {
   padding: 0 20px 12px;
   color: var(--text-light);
   font-size: 0.95rem;
@@ -343,6 +347,7 @@ html.lang-en [data-lang="fr"] { display: none; }
   cursor: pointer;
   text-align: left;
   transition: background 0.2s;
+  margin-top: auto;
 }
 
 .accordion-toggle:hover {
