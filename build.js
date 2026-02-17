@@ -27,14 +27,18 @@ function resolve(obj, keyPath) {
   }, obj);
 }
 
-function isBilingual(val) {
-  return val != null && typeof val === 'object' && !Array.isArray(val) && 'fr' in val && 'en' in val;
+var LANGS = ['fr', 'en', 'es', 'it'];
+
+function isMultilingual(val) {
+  return val != null && typeof val === 'object' && !Array.isArray(val) && 'fr' in val;
 }
 
-function expandBilingual(val, tag) {
-  if (!isBilingual(val)) return String(val != null ? val : '');
-  return '<' + tag + ' data-lang="fr">' + val.fr + '</' + tag + '>' +
-         '<' + tag + ' data-lang="en">' + val.en + '</' + tag + '>';
+function expandMultilingual(val, tag) {
+  if (!isMultilingual(val)) return String(val != null ? val : '');
+  return LANGS.map(function(lang) {
+    var text = val[lang];
+    return text != null ? '<' + tag + ' data-lang="' + lang + '">' + text + '</' + tag + '>' : '';
+  }).join('');
 }
 
 function expandTemplate(template, data) {
@@ -57,19 +61,19 @@ function expandTemplate(template, data) {
       // Handle {{p:this.field}}
       expanded = expanded.replace(/\{\{p:this\.([\w.]+)\}\}/g, function(_, field) {
         var val = resolve(item, field);
-        return expandBilingual(val, 'p');
+        return expandMultilingual(val, 'p');
       });
 
       // Handle {{strong:this.field}}
       expanded = expanded.replace(/\{\{strong:this\.([\w.]+)\}\}/g, function(_, field) {
         var val = resolve(item, field);
-        return expandBilingual(val, 'strong');
+        return expandMultilingual(val, 'strong');
       });
 
       // Handle {{this.field}} (bilingual spans)
       expanded = expanded.replace(/\{\{this\.([\w.]+)\}\}/g, function(_, field) {
         var val = resolve(item, field);
-        return expandBilingual(val, 'span');
+        return expandMultilingual(val, 'span');
       });
 
       return expanded;
@@ -79,33 +83,28 @@ function expandTemplate(template, data) {
   // 2. Process {{p:key}} → bilingual <p> tags
   result = result.replace(/\{\{p:([\w.]+)\}\}/g, function(_, key) {
     var val = resolve(data, key);
-    return expandBilingual(val, 'p');
+    return expandMultilingual(val, 'p');
   });
 
   // 3. Process {{div:key}} → bilingual <div> tags
   result = result.replace(/\{\{div:([\w.]+)\}\}/g, function(_, key) {
     var val = resolve(data, key);
-    return expandBilingual(val, 'div');
+    return expandMultilingual(val, 'div');
   });
 
   // 4. Process {{strong:key}} → bilingual <strong> tags
   result = result.replace(/\{\{strong:([\w.]+)\}\}/g, function(_, key) {
     var val = resolve(data, key);
-    return expandBilingual(val, 'strong');
+    return expandMultilingual(val, 'strong');
   });
 
-  // 5. Process {{fr:key}} → just the FR value
-  result = result.replace(/\{\{fr:([\w.]+)\}\}/g, function(_, key) {
-    var val = resolve(data, key);
-    if (isBilingual(val)) return val.fr;
-    return val != null ? String(val) : '';
-  });
-
-  // 6. Process {{en:key}} → just the EN value
-  result = result.replace(/\{\{en:([\w.]+)\}\}/g, function(_, key) {
-    var val = resolve(data, key);
-    if (isBilingual(val)) return val.en;
-    return val != null ? String(val) : '';
+  // 5-6. Process {{fr:key}}, {{en:key}}, {{es:key}}, {{it:key}} → just that language's value
+  LANGS.forEach(function(lang) {
+    result = result.replace(new RegExp('\\{\\{' + lang + ':([\\w.]+)\\}\\}', 'g'), function(_, key) {
+      var val = resolve(data, key);
+      if (isMultilingual(val)) return val[lang] || '';
+      return val != null ? String(val) : '';
+    });
   });
 
   // 7. Process {{raw:key}} → raw value
@@ -122,7 +121,7 @@ function expandTemplate(template, data) {
   // 9. Process {{key}} → bilingual <span> tags (default)
   result = result.replace(/\{\{([\w.]+)\}\}/g, function(_, key) {
     var val = resolve(data, key);
-    return expandBilingual(val, 'span');
+    return expandMultilingual(val, 'span');
   });
 
   return result;
@@ -149,7 +148,7 @@ var posts = files.map(function(file) {
   var content = parsed.content;
 
   // Validate required fields
-  var required = ['title', 'titleEn', 'date', 'slug', 'excerpt', 'excerptEn', 'image', 'imageAlt', 'metaDescription', 'breadcrumbFr', 'breadcrumbEn'];
+  var required = ['title', 'titleEn', 'titleEs', 'titleIt', 'date', 'slug', 'excerpt', 'excerptEn', 'excerptEs', 'excerptIt', 'image', 'imageAlt', 'metaDescription', 'breadcrumbFr', 'breadcrumbEn', 'breadcrumbEs', 'breadcrumbIt'];
   for (var i = 0; i < required.length; i++) {
     if (!data[required[i]]) {
       console.error('ERROR: Missing required field "' + required[i] + '" in ' + file);
@@ -157,15 +156,23 @@ var posts = files.map(function(file) {
     }
   }
 
-  // Split FR / EN content on ---EN--- marker
-  var parts = content.split('---EN---');
-  var contentFr = marked.parse(parts[0].trim());
-  var contentEn = parts[1] ? marked.parse(parts[1].trim()) : '';
+  // Split content on ---EN---, ---ES---, ---IT--- markers
+  var partsFrEn = content.split('---EN---');
+  var frContent = partsFrEn[0].trim();
+  var rest = partsFrEn[1] || '';
+  var partsEnEs = rest.split('---ES---');
+  var enContent = partsEnEs[0].trim();
+  var rest2 = partsEnEs[1] || '';
+  var partsEsIt = rest2.split('---IT---');
+  var esContent = partsEsIt[0].trim();
+  var itContent = (partsEsIt[1] || '').trim();
 
   var result = {};
   for (var key in data) { result[key] = data[key]; }
-  result.contentFr = contentFr;
-  result.contentEn = contentEn;
+  result.contentFr = marked.parse(frContent);
+  result.contentEn = enContent ? marked.parse(enContent) : '';
+  result.contentEs = esContent ? marked.parse(esContent) : '';
+  result.contentIt = itContent ? marked.parse(itContent) : '';
   result.file = file;
   return result;
 });
@@ -220,23 +227,58 @@ console.log('Built index.html from template + ' + posts.length + ' blog posts su
 // Template functions
 // ============================================================
 
+function mlSpan(obj, frKey, enKey, esKey, itKey) {
+  return '<span data-lang="fr">' + (obj[frKey] || '') + '</span>' +
+         '<span data-lang="en">' + (obj[enKey] || '') + '</span>' +
+         '<span data-lang="es">' + (obj[esKey] || '') + '</span>' +
+         '<span data-lang="it">' + (obj[itKey] || '') + '</span>';
+}
+
+function mlVal(obj, key) {
+  if (!obj || !obj[key]) return '';
+  var val = obj[key];
+  if (isMultilingual(val)) {
+    return LANGS.map(function(lang) {
+      return val[lang] ? '<span data-lang="' + lang + '">' + val[lang] + '</span>' : '';
+    }).join('');
+  }
+  return String(val);
+}
+
 function buildBlogPageHtml(post, relatedPosts) {
   var t = text.blog || {};
   var nav = text.nav || {};
-  var ctaTitleFr = post.ctaTitle || t.defaultCtaTitle.fr;
-  var ctaTitleEn = post.ctaTitleEn || t.defaultCtaTitle.en;
-  var ctaTextFr = post.ctaText || t.defaultCtaText.fr;
-  var ctaTextEn = post.ctaTextEn || t.defaultCtaText.en;
+  var ctaTitle = {
+    fr: post.ctaTitle || t.defaultCtaTitle.fr,
+    en: post.ctaTitleEn || t.defaultCtaTitle.en,
+    es: post.ctaTitleEs || t.defaultCtaTitle.es,
+    it: post.ctaTitleIt || t.defaultCtaTitle.it
+  };
+  var ctaText = {
+    fr: post.ctaText || t.defaultCtaText.fr,
+    en: post.ctaTextEn || t.defaultCtaText.en,
+    es: post.ctaTextEs || t.defaultCtaText.es,
+    it: post.ctaTextIt || t.defaultCtaText.it
+  };
   var dateISO = new Date(post.date).toISOString().split('T')[0];
-  var copyrightFr = t.copyright ? t.copyright.fr : 'Tous droits réservés.';
-  var copyrightEn = t.copyright ? t.copyright.en : 'All rights reserved.';
 
   var relatedHtml = relatedPosts.map(function(r) {
     return '\n        <a href="' + r.slug + '.html" class="related-post-link">' +
-      '\n          <span data-lang="fr">' + r.title + '</span>' +
-      '\n          <span data-lang="en">' + r.titleEn + '</span>' +
+      '\n          ' + mlSpan(r, 'title', 'titleEn', 'titleEs', 'titleIt') +
       '\n        </a>';
   }).join('');
+
+  var navSpans = function(navKey) {
+    return LANGS.map(function(lang) {
+      return '<span data-lang="' + lang + '">' + (nav[navKey][lang] || '') + '</span>';
+    }).join('');
+  };
+
+  var langSpans = function(obj) {
+    return LANGS.map(function(lang) {
+      return obj[lang] ? '<span data-lang="' + lang + '">' + obj[lang] + '</span>' : '';
+    }).join('');
+  };
 
   return '<!DOCTYPE html>\n' +
 '<html lang="fr" class="lang-fr">\n' +
@@ -278,10 +320,10 @@ function buildBlogPageHtml(post, relatedPosts) {
 '        <span></span><span></span><span></span>\n' +
 '      </button>\n' +
 '      <nav class="nav" id="nav">\n' +
-'        <a href="../index.html#accueil"><span data-lang="fr">' + nav.home.fr + '</span><span data-lang="en">' + nav.home.en + '</span></a>\n' +
-'        <a href="../index.html#cours"><span data-lang="fr">' + nav.courses.fr + '</span><span data-lang="en">' + nav.courses.en + '</span></a>\n' +
-'        <a href="../index.html#a-propos"><span data-lang="fr">' + nav.about.fr + '</span><span data-lang="en">' + nav.about.en + '</span></a>\n' +
-'        <a href="../index.html#avis"><span data-lang="fr">' + nav.reviews.fr + '</span><span data-lang="en">' + nav.reviews.en + '</span></a>\n' +
+'        <a href="../index.html#accueil">' + navSpans('home') + '</a>\n' +
+'        <a href="../index.html#cours">' + navSpans('courses') + '</a>\n' +
+'        <a href="../index.html#a-propos">' + navSpans('about') + '</a>\n' +
+'        <a href="../index.html#avis">' + navSpans('reviews') + '</a>\n' +
 '        <a href="../index.html#blog">Blog</a>\n' +
 '        <a href="../index.html#contact">Contact</a>\n' +
 '      </nav>\n' +
@@ -292,21 +334,25 @@ function buildBlogPageHtml(post, relatedPosts) {
 '        <button onclick="toggleLanguage(\'en\')" class="lang-btn" aria-label="English" title="English">\n' +
 '          <img src="../images/flag-uk.png" alt="EN" width="28" height="28">\n' +
 '        </button>\n' +
+'        <button onclick="toggleLanguage(\'es\')" class="lang-btn" aria-label="Español" title="Español">\n' +
+'          <img src="../images/spanish-flag.png" alt="ES" width="28" height="28">\n' +
+'        </button>\n' +
+'        <button onclick="toggleLanguage(\'it\')" class="lang-btn" aria-label="Italiano" title="Italiano">\n' +
+'          <img src="../images/italian-flag.png" alt="IT" width="28" height="28">\n' +
+'        </button>\n' +
 '      </div>\n' +
 '    </div>\n' +
 '  </header>\n' +
 '\n' +
 '  <main class="blog-article">\n' +
 '    <div class="breadcrumb">\n' +
-'      <a href="../index.html"><span data-lang="fr">' + nav.home.fr + '</span><span data-lang="en">' + nav.home.en + '</span></a> &gt;\n' +
+'      <a href="../index.html">' + navSpans('home') + '</a> &gt;\n' +
 '      <a href="../index.html#blog">Blog</a> &gt;\n' +
-'      <span data-lang="fr">' + post.breadcrumbFr + '</span>\n' +
-'      <span data-lang="en">' + post.breadcrumbEn + '</span>\n' +
+'      ' + mlSpan(post, 'breadcrumbFr', 'breadcrumbEn', 'breadcrumbEs', 'breadcrumbIt') + '\n' +
 '    </div>\n' +
 '\n' +
 '    <h1>\n' +
-'      <span data-lang="fr">' + post.title + '</span>\n' +
-'      <span data-lang="en">' + post.titleEn + '</span>\n' +
+'      ' + mlSpan(post, 'title', 'titleEn', 'titleEs', 'titleIt') + '\n' +
 '    </h1>\n' +
 '\n' +
 '    <img src="../images/' + post.image + '" alt="' + escapeHtml(post.imageAlt) + '" class="blog-hero-image" loading="lazy">\n' +
@@ -319,25 +365,29 @@ function buildBlogPageHtml(post, relatedPosts) {
 '      ' + post.contentEn + '\n' +
 '    </div>\n' +
 '\n' +
+'    <div data-lang="es">\n' +
+'      ' + post.contentEs + '\n' +
+'    </div>\n' +
+'\n' +
+'    <div data-lang="it">\n' +
+'      ' + post.contentIt + '\n' +
+'    </div>\n' +
+'\n' +
 '    <div class="blog-cta">\n' +
 '      <h3>\n' +
-'        <span data-lang="fr">' + ctaTitleFr + '</span>\n' +
-'        <span data-lang="en">' + ctaTitleEn + '</span>\n' +
+'        ' + langSpans(ctaTitle) + '\n' +
 '      </h3>\n' +
 '      <p>\n' +
-'        <span data-lang="fr">' + ctaTextFr + '</span>\n' +
-'        <span data-lang="en">' + ctaTextEn + '</span>\n' +
+'        ' + langSpans(ctaText) + '\n' +
 '      </p>\n' +
 '      <a href="../index.html#contact" class="btn btn-primary">\n' +
-'        <span data-lang="fr">' + t.contactUs.fr + '</span>\n' +
-'        <span data-lang="en">' + t.contactUs.en + '</span>\n' +
+'        ' + langSpans(t.contactUs) + '\n' +
 '      </a>\n' +
 '    </div>\n' +
 '\n' +
 '    <div class="related-posts">\n' +
 '      <h3>\n' +
-'        <span data-lang="fr">' + t.otherArticles.fr + '</span>\n' +
-'        <span data-lang="en">' + t.otherArticles.en + '</span>\n' +
+'        ' + langSpans(t.otherArticles) + '\n' +
 '      </h3>\n' +
 '      <div class="related-posts-grid">' + relatedHtml + '\n' +
 '      </div>\n' +
@@ -347,10 +397,9 @@ function buildBlogPageHtml(post, relatedPosts) {
 '  <footer class="footer">\n' +
 '    <div class="container">\n' +
 '      <div class="footer-bottom">\n' +
-'        <p>&copy; 2025 École Blabla Latina. <span data-lang="fr">' + copyrightFr + '</span><span data-lang="en">' + copyrightEn + '</span></p>\n' +
+'        <p>&copy; 2025 École Blabla Latina. ' + langSpans(t.copyright) + '</p>\n' +
 '        <a href="../index.html" style="color: rgba(255,255,255,0.7);">\n' +
-'          <span data-lang="fr">' + t.backToHome.fr + '</span>\n' +
-'          <span data-lang="en">' + t.backToHome.en + '</span>\n' +
+'          ' + langSpans(t.backToHome) + '\n' +
 '        </a>\n' +
 '      </div>\n' +
 '    </div>\n' +
@@ -367,16 +416,13 @@ function buildBlogCardHtml(post) {
   return '<article class="blog-card">\n' +
 '          <img src="images/' + post.image + '" alt="' + escapeHtml(post.imageAlt) + '" loading="lazy">\n' +
 '          <h3>\n' +
-'            <span data-lang="fr">' + post.title + '</span>\n' +
-'            <span data-lang="en">' + post.titleEn + '</span>\n' +
+'            ' + mlSpan(post, 'title', 'titleEn', 'titleEs', 'titleIt') + '\n' +
 '          </h3>\n' +
 '          <p>\n' +
-'            <span data-lang="fr">' + post.excerpt + '</span>\n' +
-'            <span data-lang="en">' + post.excerptEn + '</span>\n' +
+'            ' + mlSpan(post, 'excerpt', 'excerptEn', 'excerptEs', 'excerptIt') + '\n' +
 '          </p>\n' +
 '          <a href="blog/' + post.slug + '.html" class="btn btn-outline">\n' +
-'            <span data-lang="fr">' + t.readMore.fr + '</span>\n' +
-'            <span data-lang="en">' + t.readMore.en + '</span>\n' +
+'            ' + LANGS.map(function(lang) { return '<span data-lang="' + lang + '">' + (t.readMore[lang] || '') + '</span>'; }).join('') + '\n' +
 '          </a>\n' +
 '        </article>';
 }

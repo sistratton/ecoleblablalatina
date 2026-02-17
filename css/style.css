@@ -64,8 +64,10 @@ ul {
 }
 
 /* ===== LANGUAGE TOGGLE ===== */
-html.lang-fr [data-lang="en"] { display: none; }
-html.lang-en [data-lang="fr"] { display: none; }
+html.lang-fr [data-lang="en"], html.lang-fr [data-lang="es"], html.lang-fr [data-lang="it"] { display: none; }
+html.lang-en [data-lang="fr"], html.lang-en [data-lang="es"], html.lang-en [data-lang="it"] { display: none; }
+html.lang-es [data-lang="fr"], html.lang-es [data-lang="en"], html.lang-es [data-lang="it"] { display: none; }
+html.lang-it [data-lang="fr"], html.lang-it [data-lang="en"], html.lang-it [data-lang="es"] { display: none; }
 
 /* ===== UTILITIES ===== */
 .container {
