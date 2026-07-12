@@ -6,6 +6,26 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://ecoleblablalatina.com/cours/espagnol.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ecoleblablalatina.com/cours/italien.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ecoleblablalatina.com/cours/francais-fle.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ecoleblablalatina.com/cours/soutien-scolaire.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://ecoleblablalatina.com/blog/comment-apprendre-espagnol-rapidement.html</loc>
     <lastmod>2026-07-01</lastmod>
     <priority>0.8</priority>

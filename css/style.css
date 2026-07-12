@@ -1105,3 +1105,221 @@ html.lang-it [data-lang="fr"], html.lang-it [data-lang="en"], html.lang-it [data
     font-size: 2.5rem;
   }
 }
+
+/* ===== COURSE PAGE STYLES ===== */
+.course-page {
+  padding-top: var(--header-height);
+}
+
+.course-hero {
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.8)), url('../images/tree_of_languages_image.png') center/cover no-repeat;
+  padding: 60px 20px;
+}
+
+.course-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.course-hero-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+}
+
+.course-hero-text h1 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.course-hero-subtitle {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.course-section {
+  padding: 64px 20px;
+  background: var(--bg-white);
+}
+
+.course-section h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  margin: 48px 0 16px;
+}
+
+.course-section h2:first-child {
+  margin-top: 0;
+}
+
+.course-desc p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.course-benefits {
+  margin: 16px 0 32px;
+}
+
+.levels-title {
+  margin-top: 48px !important;
+}
+
+.levels-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.level-detail {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  border-left: 4px solid var(--primary);
+}
+
+.level-detail h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.level-code {
+  background: var(--primary);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.level-detail p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.certif-block {
+  background: var(--primary-light);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 16px;
+}
+
+.certif-block h2 {
+  margin-top: 0 !important;
+  color: var(--primary-dark);
+}
+
+.certif-text p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.course-formats-section {
+  padding: 64px 20px;
+  background: var(--bg);
+  text-align: center;
+}
+
+.course-formats-section h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.faq-section {
+  padding: 64px 20px;
+  background: var(--bg-alt);
+}
+
+.faq-section h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-white);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-item .accordion-toggle {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 18px 20px;
+  border-top: none;
+}
+
+.faq-item .accordion-content .level {
+  border-top: none;
+  padding: 0 20px 16px;
+}
+
+.faq-item .accordion-content p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.course-page-link {
+  display: block;
+  margin: 0 20px 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .levels-detail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-hero-text h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .course-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .course-hero-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .course-hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .course-section,
+  .course-formats-section,
+  .faq-section {
+    padding: 48px 20px;
+  }
+}
