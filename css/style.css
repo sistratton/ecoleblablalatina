@@ -253,12 +253,15 @@ html.lang-it [data-lang="fr"], html.lang-it [data-lang="en"], html.lang-it [data
   font-size: 1.3rem;
   color: var(--primary);
   font-weight: 600;
+  font-family: inherit;
   margin-bottom: 8px;
 }
 
 .hero-location {
   color: var(--text-light);
   font-size: 1.1rem;
+  font-weight: 400;
+  font-family: inherit;
   margin-bottom: 32px;
 }
 
@@ -491,6 +494,7 @@ html.lang-it [data-lang="fr"], html.lang-it [data-lang="en"], html.lang-it [data
   margin: 0 auto;
 }
 
+.founder-text h2,
 .founder-text h3 {
   font-family: Georgia, serif;
   font-size: 1.5rem;

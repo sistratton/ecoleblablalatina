@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "École Blabla Latina | Cours d'Espagnol, Italien et Français FLE à Pézenas, Hérault",
-    "description": "École de langues à Pézenas, Hérault. Cours d'espagnol, italien et français FLE du niveau A1 au C1. Cours individuels et en groupe, en présentiel ou à distance. Soutien scolaire du CP à la terminale.",
-    "keywords": "cours espagnol Pézenas, cours italien Pézenas, français FLE Pézenas, école de langues Pézenas, soutien scolaire langues, certifications linguistiques, DELE, CILS, DELF DALF, cours de langues Pézenas",
-    "ogTitle": "École Blabla Latina – Cours de Langues à Pézenas",
-    "ogDescription": "Apprenez l'espagnol, l'italien ou le français avec des professeurs qualifiés à Pézenas."
+    "title": "École de langues : espagnol, italien, français, anglais | École Blabla Latina",
+    "description": "Découvrez Blabla Latina, votre école des langues latines. Cours d'espagnol, d'italien, de français et d'anglais pour tous les niveaux, en présentiel à Pézenas (Hérault) ou en ligne.",
+    "keywords": "école des langues latines Pézenas, cours espagnol Pézenas, cours italien Pézenas, cours français FLE Pézenas, cours anglais Pézenas, école de langues Pézenas, soutien scolaire langues, DELE, CILS, DELF DALF",
+    "ogTitle": "École Blabla Latina – École des langues latines à Pézenas",
+    "ogDescription": "Découvrez Blabla Latina, votre école des langues latines à Pézenas. Cours d'espagnol, d'italien, de français et d'anglais pour tous les niveaux."
   },
 
   "nav": {
@@ -15,8 +15,8 @@
   },
 
   "hero": {
-    "title": { "fr": "École de Langues Blabla Latina", "en": "Blabla Latina Language School", "es": "Escuela de Idiomas Blabla Latina", "it": "Scuola di Lingue Blabla Latina" },
-    "tagline": "Espagnol · Italien · Français FLE",
+    "title": { "fr": "École des langues latines", "en": "Latin Language School", "es": "Escuela de idiomas latinos", "it": "Scuola di lingue latine" },
+    "tagline": { "fr": "Espagnol · Italien · Français FLE", "en": "Spanish · Italian · French FLE", "es": "Español · Italiano · Francés FLE", "it": "Spagnolo · Italiano · Francese FLE" },
     "location": { "fr": "Pézenas · Hérault, France", "en": "Pézenas · Hérault, France", "es": "Pézenas · Hérault, Francia", "it": "Pézenas · Hérault, Francia" },
     "cta": { "fr": "Contactez-nous", "en": "Contact Us", "es": "Contáctenos", "it": "Contattaci" }
   },
@@ -31,13 +31,13 @@
   },
 
   "courses": {
-    "title": { "fr": "Nos Cours", "en": "Our Courses", "es": "Nuestros Cursos", "it": "I Nostri Corsi" },
+    "title": { "fr": "Nos Cours de langues latines", "en": "Our Latin Language Courses", "es": "Nuestros cursos de idiomas latinos", "it": "I nostri corsi di lingue latine" },
     "detailsBtn": { "fr": "Détails des niveaux ▸", "en": "Level details ▸", "es": "Detalles de los niveles ▸", "it": "Dettagli dei livelli ▸" },
     "learnMoreBtn": { "fr": "En savoir plus ▸", "en": "Learn more ▸", "es": "Más información ▸", "it": "Scopri di più ▸" },
     "formatsTitle": { "fr": "Formats de cours", "en": "Course formats", "es": "Formatos de cursos", "it": "Formati dei corsi" },
 
     "spanish": {
-      "title": { "fr": "Espagnol", "en": "Spanish", "es": "Español", "it": "Spagnolo" },
+      "title": { "fr": "Cours d'espagnol", "en": "Spanish Course", "es": "Curso de español", "it": "Corso di spagnolo" },
       "desc": { "fr": "Cours d'espagnol langue étrangère (ELE) du niveau A1 au C1. Individuel ou en groupe. <b>Opportunités professionnelles et académiques en Europe et en Amérique latine.</b>", "en": "Spanish as a Foreign Language (ELE) courses from level A1 to C1. Individual or group.", "es": "Cursos de español como lengua extranjera (ELE) del nivel A1 al C1. Individual o en grupo. <b>Oportunidades profesionales y académicas en Europa y América Latina.</b>", "it": "Corsi di spagnolo come lingua straniera (ELE) dal livello A1 al C1. Individuale o di gruppo. <b>Opportunità professionali e accademiche in Europa e America Latina.</b>" },
       "glossaire": [
         {"list": { "fr": "Possibilités d'expatriation dans de nombreux pays hispanophones.", "en": "Opportunities for expatriation in many Spanish-speaking countries.", "es": "Posibilidades de expatriación en numerosos países hispanohablantes.", "it": "Possibilità di espatrio in numerosi paesi ispanofoni." } },
@@ -74,7 +74,7 @@
     },
 
     "italian": {
-      "title": { "fr": "Italien", "en": "Italian", "es": "Italiano", "it": "Italiano" },
+      "title": { "fr": "Cours d'italien", "en": "Italian Course", "es": "Curso de italiano", "it": "Corso di italiano" },
       "desc": { "fr": "Cours d'italien langue étrangère (ILE) du niveau A1 au C1. Individuel ou en groupe. <b>Immersion au cœur de la culture italienne : art, opéra, cinéma, gastronomie et patrimoine historique.</b>", "en": "Italian as a Foreign Language (ILE) courses from level A1 to C1. Individual or group. <b>Immersion in the heart of Italian culture: art, opera, cinema, gastronomy and historical heritage.</b>", "es": "Cursos de italiano como lengua extranjera (ILE) del nivel A1 al C1. Individual o en grupo. <b>Inmersión en el corazón de la cultura italiana: arte, ópera, cine, gastronomía y patrimonio histórico.</b>", "it": "Corsi di italiano come lingua straniera (ILE) dal livello A1 al C1. Individuale o di gruppo. <b>Immersione nel cuore della cultura italiana: arte, opera, cinema, gastronomia e patrimonio storico.</b>" },
       "glossaire": [
         {"list": { "fr": "Pays reconnu pour avoir les meilleures universités d'art, de design et d'architecture (7eme à l'échelle mondiale).", "en": "A country renowned for having the best universities in art, design and architecture (7th in the world).", "es": "País reconocido por tener las mejores universidades de arte, diseño y arquitectura (7.º a nivel mundial).", "it": "Paese riconosciuto per avere le migliori università di arte, design e architettura (7° a livello mondiale)." } },
@@ -111,7 +111,7 @@
     },
 
     "french": {
-      "title": { "fr": "Français FLE", "en": "French as a Foreign Language", "es": "Francés FLE", "it": "Francese FLE" },
+      "title": { "fr": "Cours de Français FLE", "en": "French FLE Course", "es": "Curso de Francés FLE", "it": "Corso di Francese FLE" },
       "desc": { "fr": "Cours de français langue étrangère (FLE) du niveau A1 au C1. Préparation DELF/DALF. <b>Ouverture à la culture française : gastronomie, art, littérature.</b>", "en": "French as a Foreign Language (FLE) courses from level A1 to C1. DELF/DALF preparation. <b>Opening up to French culture: gastronomy, art, literature.</b>", "es": "Cursos de francés como lengua extranjera (FLE) del nivel A1 al C1. Preparación DELF/DALF. <b>Apertura a la cultura francesa: gastronomía, arte, literatura.</b>", "it": "Corsi di francese come lingua straniera (FLE) dal livello A1 al C1. Preparazione DELF/DALF. <b>Apertura alla cultura francese: gastronomia, arte, letteratura.</b>" },
       "glossaire": [
         {"list": { "fr": "Maîtrise d'une langue parlée sur 5 continents.", "en": "Fluency in a language spoken on 5 continents.", "es": "Dominio de un idioma hablado en 5 continentes.", "it": "Padronanza di una lingua parlata in 5 continenti." } },
@@ -173,7 +173,7 @@
   },
 
   "about": {
-    "title": { "fr": "À propos", "en": "About", "es": "Quiénes somos", "it": "Chi siamo" },
+    "title": { "fr": "À propos de l'école de langues latines Blabla Latina", "en": "About Blabla Latina Latin Language School", "es": "Sobre la escuela de idiomas latinos Blabla Latina", "it": "La scuola di lingue latine Blabla Latina" },
     "text": {
       "fr": "<p>Située à <b>Pézenas</b>, notre école de langues accompagne enfants, adolescents et adultes dans l'apprentissage de l'espagnol, de l'italien et du français (FLE). Nous proposons des cours en individuel ou en groupe, TOUS NIVEAUX, dans un cadre bienveillant et stimulant.</p><p>Notre objectif est d'amener chaque élève vers une progression solide et durable, notamment à travers la préparation aux <b>certifications linguistiques officielles</b>, reconnues à l'international. Nous offrons également un <b>soutien scolaire du CP à la Terminale</b>, afin d'accompagner chaque parcours avec rigueur, écoute et attention.</p>",
       "en": "<p>Located in Pézenas, our language school supports children, teenagers, and adults in learning Spanish, Italian, and French (FLE). We offer individual or group courses for all levels in a supportive and stimulating environment.</p><p>Our goal is to guide each student towards solid and lasting progress, particularly through preparation for official, internationally recognized language certifications. We also offer academic support from elementary school (CP) through high school (Terminale), to guide each student's journey with rigor, attentiveness, and care.</p>",
@@ -206,7 +206,7 @@
   },
 
   "founder": {
-    "title": { "fr": "Qui je suis", "en": "About me", "es": "Quién soy", "it": "Chi sono" },
+    "title": { "fr": "Je suis professeur d'espagnol, d'italien et de français", "en": "I am a Spanish, Italian and French teacher", "es": "Soy profesora de español, italiano y francés", "it": "Sono insegnante di spagnolo, italiano e francese" },
     "bio1": {
       "fr": "Je suis Camille Farion, fondatrice de l'<b>École Blabla Latina</b> et professeure d'espagnol, d'italien et de français (FLE) depuis plus de dix ans. Titulaire d'un <b>Master en langues étrangères</b>, je mets ma passion pour l'enseignement au service des <b>enfants, adolescents et adultes</b>, en les accompagnant vers un <b>progrès rapide et durable</b> tout en leur ouvrant les portes <b>d'une véritable richesse interculturelle</b>.",
       "en": "I am Camille Farion, founder of the <b>Blabla Latina School</b> and a teacher of Spanish, Italian and French (FLE) for over ten years. Holding a <b>Master's degree in foreign languages</b>, I put my passion for teaching at the service of <b>children, teenagers and adults</b>, guiding them towards rapid and lasting progress while opening the doors to a truly rich intercultural experience.",
@@ -240,7 +240,7 @@
   },
 
   "reviews": {
-    "title": { "fr": "Avis de nos élèves", "en": "Student Reviews", "es": "Opiniones de nuestros alumnos", "it": "Recensioni dei nostri studenti" },
+    "title": { "fr": "Avis des élèves de notre école de langues", "en": "Reviews from our language school students", "es": "Opiniones de los alumnos de nuestra escuela de idiomas", "it": "Recensioni degli studenti della nostra scuola di lingue" },
     "subtitle": { "fr": "Découvrez ce que nos élèves disent de nous", "en": "Authentic student reviews (in French)", "es": "Descubra lo que dicen nuestros alumnos (en francés)", "it": "Scoprite cosa dicono i nostri studenti (in francese)" },
     "items": [
       { "src": "images/avis/espagnol/carla.png", "alt": "Avis 5 étoiles de Carla – cours d'espagnol à l'École Blabla Latina" },
@@ -258,7 +258,7 @@
   },
 
   "contact": {
-    "title": { "fr": "Contactez-nous", "en": "Contact Us", "es": "Contáctenos", "it": "Contattaci" },
+    "title": { "fr": "Contactez notre école de langues", "en": "Contact our language school", "es": "Contacte con nuestra escuela de idiomas", "it": "Contattate la nostra scuola di lingue" },
     "subtitle": { "fr": "Laissez un message. Nous revenons vers vous.", "en": "Leave us a message. We'll get back to you.", "es": "Déjenos un mensaje. Le responderemos.", "it": "Lasciateci un messaggio. Vi risponderemo." },
     "nameLabel": { "fr": "Nom", "en": "Name", "es": "Nombre", "it": "Nome" },
     "phoneLabel": { "fr": "Téléphone", "en": "Phone", "es": "Teléfono", "it": "Telefono" },
@@ -284,6 +284,7 @@
   },
 
   "blog": {
+    "sectionTitle": { "fr": "Blog de notre école de langues", "en": "Our language school blog", "es": "Blog de nuestra escuela de idiomas", "it": "Blog della nostra scuola di lingue" },
     "readMore": { "fr": "Lire la suite", "en": "Read more", "es": "Leer más", "it": "Leggi di più" },
     "otherArticles": { "fr": "Autres articles", "en": "Other articles", "es": "Otros artículos", "it": "Altri articoli" },
     "contactUs": { "fr": "Contactez-nous", "en": "Contact Us", "es": "Contáctenos", "it": "Contattaci" },
