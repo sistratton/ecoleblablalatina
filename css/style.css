@@ -1056,6 +1056,31 @@ html.lang-it [data-lang="fr"], html.lang-it [data-lang="en"], html.lang-it [data
   color: var(--text-light);
 }
 
+.blog-article ul,
+.blog-article ol {
+  margin: 0 0 16px;
+  padding-left: 1.5em;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.blog-article ul {
+  list-style: disc;
+}
+
+.blog-article ol {
+  list-style: decimal;
+}
+
+.blog-article li {
+  margin-bottom: 8px;
+}
+
+.blog-article li::marker {
+  color: var(--primary);
+}
+
 .blog-cta {
   margin-top: 48px;
   padding: 32px;

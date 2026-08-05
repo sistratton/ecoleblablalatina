@@ -613,6 +613,7 @@ function buildBlogPageHtml(post, relatedPosts) {
     it: post.ctaTextIt || t.defaultCtaText.it
   };
   var dateISO = new Date(post.date).toISOString().split('T')[0];
+  var titleTag = post.metaTitle || post.title;
 
   var relatedHtml = relatedPosts.map(function(r) {
     return '\n        <a href="' + r.slug + '.html" class="related-post-link">' +
@@ -637,10 +638,10 @@ function buildBlogPageHtml(post, relatedPosts) {
 '<head>\n' +
 '  <meta charset="UTF-8">\n' +
 '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-'  <title>' + escapeHtml(post.title) + ' | École Blabla Latina, Pézenas</title>\n' +
+'  <title>' + escapeHtml(titleTag) + ' | École Blabla Latina, Pézenas</title>\n' +
 '  <meta name="description" content="' + escapeHtml(post.metaDescription) + '">\n' +
 '  <link rel="canonical" href="' + SITE_URL + '/blog/' + post.slug + '.html">\n' +
-'  <meta property="og:title" content="' + escapeHtml(post.title) + ' – École Blabla Latina">\n' +
+'  <meta property="og:title" content="' + escapeHtml(titleTag) + ' – École Blabla Latina">\n' +
 '  <meta property="og:description" content="' + escapeHtml(post.metaDescription) + '">\n' +
 '  <meta property="og:type" content="article">\n' +
 '  <meta property="og:image" content="' + SITE_URL + '/images/' + post.image + '">\n' +
