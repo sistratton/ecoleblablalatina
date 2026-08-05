@@ -1,10 +1,10 @@
 {
   "meta": {
     "title": "École de langues : espagnol, italien, français, anglais | École Blabla Latina",
-    "description": "Découvrez Blabla Latina, votre école des langues latines. Cours d'espagnol, d'italien, de français et d'anglais pour tous les niveaux, en présentiel à Pézenas (Hérault) ou en ligne.",
-    "keywords": "école des langues latines Pézenas, cours espagnol Pézenas, cours italien Pézenas, cours français FLE Pézenas, cours anglais Pézenas, école de langues Pézenas, soutien scolaire langues, DELE, CILS, DELF DALF",
-    "ogTitle": "École Blabla Latina – École des langues latines à Pézenas",
-    "ogDescription": "Découvrez Blabla Latina, votre école des langues latines à Pézenas. Cours d'espagnol, d'italien, de français et d'anglais pour tous les niveaux."
+    "description": "Découvrez Blabla Latina, votre école de langues. Cours d'espagnol, d'italien, de français et d'anglais pour tous les niveaux, en présentiel à Pézenas (Hérault) ou en ligne.",
+    "keywords": "école de langues Pézenas, cours espagnol Pézenas, cours italien Pézenas, cours français FLE Pézenas, cours anglais Pézenas, soutien scolaire langues, DELE, CILS, DELF DALF",
+    "ogTitle": "École Blabla Latina – École de Langues à Pézenas",
+    "ogDescription": "Découvrez Blabla Latina, votre école de langues à Pézenas. Cours d'espagnol, d'italien, de français et d'anglais pour tous les niveaux."
   },
 
   "nav": {
@@ -15,7 +15,7 @@
   },
 
   "hero": {
-    "title": { "fr": "École des langues latines", "en": "Latin Language School", "es": "Escuela de idiomas latinos", "it": "Scuola di lingue latine" },
+    "title": { "fr": "École de langues", "en": "Language School", "es": "Escuela de idiomas", "it": "Scuola di lingue" },
     "tagline": { "fr": "Espagnol · Italien · Français FLE", "en": "Spanish · Italian · French FLE", "es": "Español · Italiano · Francés FLE", "it": "Spagnolo · Italiano · Francese FLE" },
     "location": { "fr": "Pézenas · Hérault, France", "en": "Pézenas · Hérault, France", "es": "Pézenas · Hérault, Francia", "it": "Pézenas · Hérault, Francia" },
     "cta": { "fr": "Contactez-nous", "en": "Contact Us", "es": "Contáctenos", "it": "Contattaci" }
@@ -31,7 +31,7 @@
   },
 
   "courses": {
-    "title": { "fr": "Nos Cours de langues latines", "en": "Our Latin Language Courses", "es": "Nuestros cursos de idiomas latinos", "it": "I nostri corsi di lingue latine" },
+    "title": { "fr": "Nos Cours de langues", "en": "Our Language Courses", "es": "Nuestros cursos de idiomas", "it": "I nostri corsi di lingue" },
     "detailsBtn": { "fr": "Détails des niveaux ▸", "en": "Level details ▸", "es": "Detalles de los niveles ▸", "it": "Dettagli dei livelli ▸" },
     "learnMoreBtn": { "fr": "En savoir plus ▸", "en": "Learn more ▸", "es": "Más información ▸", "it": "Scopri di più ▸" },
     "formatsTitle": { "fr": "Formats de cours", "en": "Course formats", "es": "Formatos de cursos", "it": "Formati dei corsi" },
@@ -173,7 +173,7 @@
   },
 
   "about": {
-    "title": { "fr": "À propos de l'école de langues latines Blabla Latina", "en": "About Blabla Latina Latin Language School", "es": "Sobre la escuela de idiomas latinos Blabla Latina", "it": "La scuola di lingue latine Blabla Latina" },
+    "title": { "fr": "À propos de l'école de langues Blabla Latina", "en": "About Blabla Latina Language School", "es": "Sobre la escuela de idiomas Blabla Latina", "it": "La scuola di lingue Blabla Latina" },
     "text": {
       "fr": "<p>Située à <b>Pézenas</b>, notre école de langues accompagne enfants, adolescents et adultes dans l'apprentissage de l'espagnol, de l'italien et du français (FLE). Nous proposons des cours en individuel ou en groupe, TOUS NIVEAUX, dans un cadre bienveillant et stimulant.</p><p>Notre objectif est d'amener chaque élève vers une progression solide et durable, notamment à travers la préparation aux <b>certifications linguistiques officielles</b>, reconnues à l'international. Nous offrons également un <b>soutien scolaire du CP à la Terminale</b>, afin d'accompagner chaque parcours avec rigueur, écoute et attention.</p>",
       "en": "<p>Located in Pézenas, our language school supports children, teenagers, and adults in learning Spanish, Italian, and French (FLE). We offer individual or group courses for all levels in a supportive and stimulating environment.</p><p>Our goal is to guide each student towards solid and lasting progress, particularly through preparation for official, internationally recognized language certifications. We also offer academic support from elementary school (CP) through high school (Terminale), to guide each student's journey with rigor, attentiveness, and care.</p>",
